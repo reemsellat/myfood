@@ -71,7 +71,7 @@ function Register() {
     }
 
     const onhandleChange = async (e: any) => {
-        path.current="/login"
+        path.current="/myfood/login"
         e.preventDefault()
         if (password.current?.value !== confirmPassword.current?.value) {
             const p = document.getElementById("password-error") as HTMLParagraphElement
@@ -123,7 +123,7 @@ function Register() {
                     <input type="password" id="confirm-password" ref={confirmPassword}></input>
                     <div><button type="submit" className="submit">SIGN UP</button></div>
                     
-                    <NavLink to='/login'>Already have an account ?</NavLink>
+                    <NavLink to='/myfood/login'>Already have an account ?</NavLink>
                 </form>
             </div>
 

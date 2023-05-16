@@ -7,7 +7,7 @@ import { mdiClose } from '@mdi/js';
 function NavigationBar() {
     const navigate = useNavigate()
     const handleonRegister = () => {
-        navigate('/register')
+        navigate('/myfood/register')
     }
     const showHamburgerNavMenu = () => {
         
@@ -27,9 +27,9 @@ function NavigationBar() {
 
                 <div id="part-2">
 
-                    <NavLink to='/'>Home </NavLink><span></span>
-                    <NavLink to='/about-us'>About </NavLink><span></span>
-                    <NavLink to='/reviews'>Reviews</NavLink>
+                    <NavLink to='/myfood'>Home </NavLink><span></span>
+                    <NavLink to='/myfood/about-us'>About </NavLink><span></span>
+                    <NavLink to='/myfood/reviews'>Reviews</NavLink>
 
                 </div>
                 <div id="part-3">
@@ -42,10 +42,10 @@ function NavigationBar() {
             </div>
             <div className="hamburger-nav-menu">
                 <div><button className="close" onClick={hideHamburgerNavMenu}><Icon path={mdiClose} size={1} /></button></div>
-                <NavLink to='/'>Home </NavLink>
-                <NavLink to='/about-us'>About </NavLink>
-                <NavLink to='/reviews'>Reviews</NavLink>
-                <NavLink style={{color:"#B9B9B9"}} to='/register'>Register or log in</NavLink>
+                <NavLink to='/myfood'>Home </NavLink>
+                <NavLink to='/myfood/about-us'>About </NavLink>
+                <NavLink to='/myfood/reviews'>Reviews</NavLink>
+                <NavLink style={{color:"#B9B9B9"}} to='/myfood/register'>Register or log in</NavLink>
                 
 
             </div>

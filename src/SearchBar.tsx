@@ -65,7 +65,7 @@ function SearchBar() {
             <div className="filtered-items">{
                 filterItems.map((item) => {
                     return (
-                        <NavLink  to={`/categories/${item.category}/${item.id}`} end>{item.name}</NavLink>
+                        <NavLink  to={`/myfood/categories/${item.category}/${item.id}`} end>{item.name}</NavLink>
 
                     )
                 })}

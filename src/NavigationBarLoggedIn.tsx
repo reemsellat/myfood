@@ -31,7 +31,7 @@ function NavigationBarLoggedIn() {
         await logOut()
     }
     useEffect(() => {
-        navigate('/categories')
+        navigate('/myfood/categories')
         getDefaultShoppingBasketCount()
 
     }, [])
@@ -57,7 +57,7 @@ function NavigationBarLoggedIn() {
                     <SearchBar></SearchBar>
                 </div>
                 <div id="part-2">
-                    <button onClick={() => { navigate('/payment') }} className="shopping-basket"><Icon path={mdiShoppingOutline} size={1} /><span>{shoppingBasketCount}</span></button>
+                    <button onClick={() => { navigate('/myfood/payment') }} className="shopping-basket"><Icon path={mdiShoppingOutline} size={1} /><span>{shoppingBasketCount}</span></button>
                     <button className="log-out" onClick={handleonLogOut}><Icon path={mdiLogout} size={1} /></button>
                 </div>
 
@@ -67,17 +67,17 @@ function NavigationBarLoggedIn() {
                 <h1>my food</h1>
                 <div className="profile-image"></div>
                 <h2>{getAuth().currentUser?.displayName}</h2>
-                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/categories' ><p>Categories</p></NavLink>
-                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/payment' ><p>Payment</p></NavLink>
-                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/about-us'><p>About us</p></NavLink>
-                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/reviews'><p>Reviews</p></NavLink>
+                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/categories' ><p>Categories</p></NavLink>
+                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/payment' ><p>Payment</p></NavLink>
+                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/about-us'><p>About us</p></NavLink>
+                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/reviews'><p>Reviews</p></NavLink>
             </div>
             <div className="login-top-navigation-bar-small-devices">
                 <div id="part-1">
                     <h1>my food</h1>
                 </div>
                 <div id="part-2">
-                    <button className="shopping-basket" onClick={() => { navigate('/payment') }}><Icon path={mdiShoppingOutline} size={1} /><span>{shoppingBasketCount}</span></button>
+                    <button className="shopping-basket" onClick={() => { navigate('/myfood/payment') }}><Icon path={mdiShoppingOutline} size={1} /><span>{shoppingBasketCount}</span></button>
                     <div className="hamburger-icon" onClick={showHamburgerNavMenu}>
                         <Icon path={mdiMenu} size={1.1} />
                     </div>
@@ -91,10 +91,10 @@ function NavigationBarLoggedIn() {
                     <div className="profile-image"></div>
                     <h3>{getAuth().currentUser?.displayName}</h3>
                 </div>
-                <NavLink to='/categories' ><p>Categories</p></NavLink>
-                <NavLink to='/payment' ><p>Payment</p></NavLink>
-                <NavLink to='/about-us'><p>About us</p></NavLink>
-                <NavLink to='/reviews'><p>Reviews</p></NavLink>
+                <NavLink to='/myfood/categories' ><p>Categories</p></NavLink>
+                <NavLink to='/myfood/payment' ><p>Payment</p></NavLink>
+                <NavLink to='/myfood/about-us'><p>About us</p></NavLink>
+                <NavLink to='/myfood/reviews'><p>Reviews</p></NavLink>
 
                 <div id="part-3">
                     <Icon path={mdiMagnify} size={1} rotate={90} />
