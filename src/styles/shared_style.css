@@ -1,0 +1,52 @@
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: "Roboto";
+  color: whitesmoke;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+a {
+  text-decoration: none;
+}
+
+.register {
+  background-color: rgb(27, 27, 27);
+  color: rgb(81, 216, 115);
+  border: 1px solid rgb(81, 216, 115);
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+.register:hover {
+  background-color: rgb(81, 216, 115);
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.submit {
+  border: 1px solid rgb(81, 216, 115);
+  background-color: rgb(81, 216, 115);
+  border-radius: 20px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}/*# sourceMappingURL=shared_style.css.map */

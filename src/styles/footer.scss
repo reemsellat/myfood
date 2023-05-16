@@ -1,0 +1,74 @@
+@import './shared_style.scss';
+.footer {
+    
+    margin-top: 50px;
+    background-color: black;
+
+    span {
+        min-width: 10px;
+    }
+
+    
+    @include flex(flex,center,auto,auto,30%,auto);
+    div {
+      
+        display: flex;
+
+    }
+
+    #part-1 {
+        justify-content: center;
+    }
+
+    #part-2 {
+        max-height: 150px;
+        min-height: fit-content;
+        justify-content: center;
+       
+    }
+
+    #part-3 {
+        justify-content: center;
+
+        svg {
+            fill: white;
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 768px) and (max-width:992px) {}
+
+@media only screen and (max-width:768px) and (min-width:600px) {
+    .footer{
+        h1{
+            font-size: 20px;
+        }
+              justify-content: start;
+        
+      
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        padding-left: 7vw;;
+        flex-direction: column;
+        
+        h1 {
+            font-size: 20px;
+        }
+
+        #part-2 {
+            @include flex(flex,start,auto,5%,auto,column);
+           
+        }
+       
+            align-items: start;
+        
+    }
+}

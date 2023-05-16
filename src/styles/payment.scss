@@ -1,0 +1,125 @@
+@import './shared_style.scss';
+.payment {
+    @include position(absolute,10vh,0,0,25vw);
+    @include flex(flex,auto,center,10%,40%,auto);
+
+   
+ 
+   
+
+    #part-1 {
+
+        #shopping-cart {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1vh;
+
+            div {
+                background-color: rgb(48, 48, 48);
+                border-radius: 20px;
+                max-height: 100px;
+                display: flex;
+                align-items: center;
+
+                #name {
+                    width: 30%;
+                    align-self: center;
+                }
+
+                #count {
+                    width: 5%;
+                    text-align: center;
+                }
+
+                #price {
+                    width: 35%;
+                    text-align: center;
+                }
+
+                h3 {
+
+                    height: fit-content;
+                }
+
+                img {
+                    width: 10%;
+                }
+
+                button {
+                    border-radius: 50%;
+                    border: none;
+                    width: 25px;
+                    height: 25px;
+                    
+                    @include flex(flex,center,center,auto,auto,auto);
+                   
+                    background-color: gray;
+                }
+            }
+        }
+
+    }
+
+    #part-2 {
+        @include flex(flex,start,start,auto,auto,column);
+      
+        form {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+             row-gap: 10px;
+            input {
+                background-color: transparent;
+                border: none;
+                box-shadow: rgb(58, 57, 57) 0px 1px 0px;
+            }
+            button{
+                margin-top: 10%;
+                margin-left: 40%;
+            }
+        }
+
+    }
+}
+.disable {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  
+  /* Disable scrolling on child elements */
+  .disable div,
+  .disable textarea {
+    overflow: hidden;
+  }
+  @media only screen and (min-width: 992px) {
+    
+    
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width:992px) {
+        .payment{
+            left:5vw;
+        }
+    }
+    
+    @media only screen and (max-width:768px) and (min-width:600px) {
+      .payment{
+        flex-direction: column;
+        left:5vw;
+        padding-top:10vh;
+        div{
+        width: 70vw;}
+      }
+    }
+    @media only screen and (max-width: 600px) {
+        .payment{
+            flex-direction: column;
+            left:5vw;
+            right: 5vw;
+            padding-top:10vh;
+          }
+      
+        
+    }
+    

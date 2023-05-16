@@ -1,0 +1,76 @@
+@import './shared_style.scss';
+#reviews {
+    @include position(absolute,10vh,auto,0,25vw);
+  
+    svg{
+        fill:gray;
+        margin-top: 1vh;
+        
+    }
+    textarea{
+        width: 35%;
+        height: 100px;
+        padding: 10px;
+      
+        resize: none;
+        color:gray;
+
+    }
+    .review {
+        margin-top: 1vh;
+        display: flex;
+        justify-content: center;
+        background-color: $gray;
+        border-radius: 20px;
+        width: 40%;
+
+        div {
+            width: 80%;
+        }
+
+     
+    }
+}
+@media only screen and (min-width: 992px) {
+    
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width:992px) {
+    #reviews{
+        .review{
+            width:45%
+        }
+        left: 5vw;
+        textarea{
+            width: 40%;
+        }
+      }
+}
+
+@media only screen and (max-width:768px) and (min-width:600px) {
+    #reviews{
+        .review{
+            width:50%
+        }
+        left: 5vw;
+        textarea{
+            width: 45%;
+        }
+      }
+}
+@media only screen and (max-width: 600px) {
+    #reviews{
+        .review{
+            width:80%
+        }
+        left: 5vw;
+        textarea{
+            width: 70%;
+        }
+      }
+  
+    
+}
+
+

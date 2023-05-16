@@ -1,0 +1,419 @@
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: "Roboto";
+  color: whitesmoke;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+a {
+  text-decoration: none;
+}
+
+.register {
+  background-color: rgb(27, 27, 27);
+  color: rgb(81, 216, 115);
+  border: 1px solid rgb(81, 216, 115);
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+.register:hover {
+  background-color: rgb(81, 216, 115);
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.submit {
+  border: 1px solid rgb(81, 216, 115);
+  background-color: rgb(81, 216, 115);
+  border-radius: 20px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.navigation-bar {
+  max-width: 85vw;
+  display: flex;
+  align-items: center;
+  padding-left: 7.5vw;
+}
+.navigation-bar span {
+  width: 10px;
+}
+.navigation-bar a {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.navigation-bar a::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: rgb(252, 72, 102);
+  transition: opacity 400ms, transform 400ms;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+.navigation-bar a:hover::after,
+.navigation-bar a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+  transform: scale(1);
+}
+.navigation-bar div {
+  display: flex;
+}
+.navigation-bar #part-2,
+.navigation-bar #part-1 {
+  justify-content: start;
+  flex-basis: 25%;
+}
+.navigation-bar #part-2 a {
+  flex-basis: 30%;
+}
+.navigation-bar #part-3 {
+  flex-basis: 50%;
+  justify-content: end;
+}
+.navigation-bar #part-3 svg {
+  fill: white;
+  cursor: pointer;
+}
+
+.login-navigation-bar {
+  width: 20vw;
+  background-color: rgb(48, 48, 48);
+  display: flex;
+  align-items: center;
+  justify-content: auto;
+  gap: auto;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  left: 0;
+}
+.login-navigation-bar div {
+  flex-basis: auto;
+}
+.login-navigation-bar a {
+  width: 80%;
+  padding: 0;
+  flex-basis: 7vh;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.login-navigation-bar a p {
+  margin-left: 10%;
+  height: 0px;
+  line-height: 0px;
+}
+.login-navigation-bar a:hover {
+  background-color: rgb(252, 72, 102);
+}
+
+.login-top-navigation-bar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+  flex-direction: auto;
+  background-color: rgb(48, 48, 48);
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  right: 0;
+  left: 20vw;
+  z-index: 1000;
+}
+.login-top-navigation-bar div {
+  flex-basis: 40%;
+}
+.login-top-navigation-bar #part-1 {
+  display: flex;
+  align-items: center;
+  justify-content: auto;
+  gap: 3%;
+  flex-direction: auto;
+}
+.login-top-navigation-bar #part-1 div {
+  flex-basis: auto;
+}
+.login-top-navigation-bar #part-2 {
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 3%;
+       column-gap: 3%;
+}
+.login-top-navigation-bar .log-out {
+  background-color: rgb(187, 30, 56);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+}
+.login-top-navigation-bar .log-out svg {
+  fill: whitesmoke;
+}
+.login-top-navigation-bar .shopping-basket {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: gray;
+}
+
+.shopping-basket {
+  position: relative;
+}
+.shopping-basket span {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.hamburger-nav-menu, .login-hamburger-nav-menu {
+  transition: all 0.3s;
+  z-index: 1000;
+  background-color: rgb(48, 48, 48);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -360px;
+  left: auto;
+  display: flex;
+  row-gap: 3%;
+  flex-direction: column;
+  width: min(360px, 100vw);
+}
+.hamburger-nav-menu a, .login-hamburger-nav-menu a {
+  transition: all 0.3s;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 10%;
+  border-bottom: 1px solid transparent;
+}
+.hamburger-nav-menu a:hover, .login-hamburger-nav-menu a:hover {
+  border-bottom: 1px solid rgb(252, 72, 102);
+}
+.hamburger-nav-menu .close, .login-hamburger-nav-menu .close {
+  background-color: transparent;
+  border: none;
+  margin-left: 90%;
+  margin-top: 2%;
+}
+
+.login-hamburger-nav-menu {
+  z-index: 1000;
+  row-gap: 0;
+}
+.login-hamburger-nav-menu a p {
+  margin-bottom: 0;
+}
+.login-hamburger-nav-menu #part-1 {
+  display: flex;
+  align-items: center;
+  justify-content: column;
+  gap: auto;
+  flex-direction: auto;
+}
+.login-hamburger-nav-menu #part-1 div {
+  flex-basis: auto;
+}
+.login-hamburger-nav-menu #part-4 {
+  cursor: pointer;
+  color: #B9B9B9;
+  margin-top: 3%;
+}
+.login-hamburger-nav-menu #part-3 {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.login-hamburger-nav-menu .search-bar {
+  background-color: #1B1B1B;
+  border: none;
+  border-radius: 20px;
+  width: 80%;
+  margin-left: 2%;
+}
+.login-hamburger-nav-menu .search-bar::-moz-placeholder {
+  font-family: "Roboto";
+  padding-left: 5%;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.login-hamburger-nav-menu .search-bar::placeholder {
+  font-family: "Roboto";
+  padding-left: 5%;
+  transition: all 0.3s;
+}
+.login-hamburger-nav-menu .search-bar:focus {
+  outline: none;
+}
+.login-hamburger-nav-menu .search-bar:focus::-moz-placeholder {
+  color: transparent;
+}
+.login-hamburger-nav-menu .search-bar:focus::placeholder {
+  color: transparent;
+}
+
+.login-top-navigation-bar-small-devices {
+  display: flex;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.login-top-navigation-bar-small-devices #part-1 {
+  flex-basis: 75vw;
+}
+.login-top-navigation-bar-small-devices #part-2 {
+  display: flex;
+  flex-basis: 15vw;
+}
+.login-top-navigation-bar-small-devices #part-2 .shopping-basket {
+  background-color: transparent;
+  border: none;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url(/public/images/default-profile-pic.jpg);
+  background-size: contain;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.filtered-items {
+  z-index: 1000;
+  background-color: rgb(48, 48, 48);
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: gray 1.95px 1.95px 2.6px;
+}
+.filtered-items a {
+  padding: 5%;
+  border-bottom: 1px solid transparent;
+}
+.filtered-items a:hover {
+  background-color: #464545;
+  border-bottom: 1px solid rgb(252, 72, 102);
+}
+
+@media only screen and (min-width: 992px) {
+  .navigation-bar #part-3 .hamburger-icon {
+    display: none;
+  }
+  .login-top-navigation-bar-small-devices {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .navigation-bar #part-2 a {
+    display: none;
+  }
+  .navigation-bar #part-3 button {
+    display: none;
+  }
+  .login-navigation-bar,
+  .login-top-navigation-bar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navigation-bar #part-2 a {
+    display: none;
+  }
+  .navigation-bar #part-3 button {
+    display: none;
+  }
+  .navigation-bar h1 {
+    font-size: 20px;
+    height: -moz-min-content;
+    height: min-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .login-navigation-bar,
+  .login-top-navigation-bar {
+    display: none;
+  }
+  .login-top-navigation-bar-small-devices h1 {
+    font-size: 20px;
+  }
+}
+.search-bar-input {
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(27, 27, 27);
+  border: none;
+  border-radius: 20px;
+}
+.search-bar-input::-moz-placeholder {
+  font-family: "Roboto";
+  padding-left: 5%;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.search-bar-input::placeholder {
+  font-family: "Roboto";
+  padding-left: 5%;
+  transition: all 0.3s;
+}
+.search-bar-input:focus {
+  outline: none;
+}
+.search-bar-input:focus::-moz-placeholder {
+  color: transparent;
+}
+.search-bar-input:focus::placeholder {
+  color: transparent;
+}/*# sourceMappingURL=navigateBar.css.map */

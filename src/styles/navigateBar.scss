@@ -1,0 +1,404 @@
+@import './shared_style.scss';
+
+.navigation-bar {
+
+    span {
+        width: 10px;
+    }
+
+    a {
+
+        max-width: fit-content;
+        position: relative;
+        display: block;
+        text-align: center;
+
+
+    }
+
+    a::after {
+        content: '';
+        @include position(absolute,auto,0,auto,0);
+       
+        width: 100%;
+        height: 0.1em;
+        background-color: $pink;
+
+        transition: opacity 400ms, transform 400ms;
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    a:hover::after,
+    a:focus::after {
+
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+        transform: scale(1);
+    }
+
+    max-width: 85vw;
+    display: flex;
+    align-items: center;
+    padding-left: 7.5vw;
+
+    div {
+
+        display: flex;
+
+
+
+    }
+
+    #part-2,
+    #part-1 {
+        justify-content: start;
+        flex-basis: 25%;
+    }
+
+    #part-2 {
+        a {
+            flex-basis: 30%;
+        }
+    }
+
+    #part-3 {
+        flex-basis: 50%;
+        justify-content: end;
+
+        svg {
+            fill: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.login-navigation-bar {
+    width: 20vw;
+    background-color: $gray;
+
+    @include flex(flex, center, auto, auto, auto, column);
+
+    a {
+        p {
+            margin-left: 10%;
+            height: 0px;
+            line-height: 0px;
+        }
+
+        width: 80%;
+        padding: 0;
+        flex-basis: 7vh;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: $pink;
+        }
+
+
+    }
+
+
+    @include position(fixed,0,0,auto,0);
+    
+}
+
+.login-top-navigation-bar {
+    height: 10vh;
+    @include flex(flex, center, center, auto, 40%, auto);
+
+    background-color: $gray;
+    @include position(fixed,0,auto,0,20vw);
+    z-index: 1000;
+   
+
+    #part-1 {
+        @include flex(flex, center, auto, 3%, auto, auto);
+
+
+
+
+    }
+
+    #part-2 {
+        display: flex;
+        justify-content: end;
+
+        column-gap: 3%;
+    }
+
+    .log-out {
+        background-color: rgb(187, 30, 56);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+
+        svg {
+            fill: whitesmoke
+        }
+    }
+
+    .shopping-basket {
+
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: gray;
+
+
+    }
+}
+
+.shopping-basket {
+    position: relative;
+
+    span {
+        @include position(absolute,auto,0,0,auto);
+       
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+
+    }
+}
+
+.hamburger-nav-menu {
+    transition: all 0.3s;
+    z-index: 1000;
+    background-color: rgb(48, 48, 48);
+    @include position(fixed,0,0,-360px,auto);
+   
+    display: flex;
+
+    row-gap: 3%;
+    flex-direction: column;
+    width: min(360px, 100vw);
+
+    a {
+        transition: all 0.3s;
+        width: fit-content;
+        margin-left: 10%;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid $pink;
+        }
+    }
+
+    .close {
+        background-color: transparent;
+        border: none;
+        margin-left: 90%;
+        margin-top: 2%;
+    }
+}
+
+.login-hamburger-nav-menu {
+
+    @extend .hamburger-nav-menu;
+    z-index: 1000;
+    row-gap: 0;
+
+    a p {
+        margin-bottom: 0;
+    }
+
+    #part-1 {
+        @include flex(flex, center, column, auto, auto, auto);
+    }
+
+    #part-4 {
+        cursor: pointer;
+        color: #B9B9B9;
+        margin-top: 3%;
+
+    }
+
+    #part-3 {
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .search-bar {
+
+        background-color: #1B1B1B;
+        border: none;
+        border-radius: 20px;
+        width: 80%;
+        margin-left: 2%;
+
+        &::placeholder {
+            font-family: 'Roboto';
+            padding-left: 5%;
+            transition: all 0.3s;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: transparent
+            }
+
+            outline: none;
+        }
+    }
+
+}
+
+.login-top-navigation-bar-small-devices {
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    #part-1 {
+        flex-basis: 75vw;
+    }
+
+    #part-2 {
+        display: flex;
+        flex-basis: 15vw;
+
+        .shopping-basket {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(/public/images/default-profile-pic.jpg);
+    background-size: contain;
+}
+
+.search-bar {
+    position: relative;
+
+}
+
+.filtered-items {
+    z-index: 1000;
+    background-color: $gray;
+    @include position(absolute,auto,auto,auto,0);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: gray 1.95px 1.95px 2.6px;
+
+    a {
+        padding: 5%;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            background-color: #464545;
+            border-bottom: 1px solid $pink;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 992px) {
+    .navigation-bar {
+        #part-3 {
+            .hamburger-icon {
+                display: none;
+            }
+        }
+    }
+
+    .login-top-navigation-bar-small-devices {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width:992px) {
+    .navigation-bar {
+        #part-2 {
+            a {
+                display: none;
+            }
+        }
+
+        #part-3 {
+            button {
+                display: none;
+            }
+        }
+    }
+
+    .login-navigation-bar,
+    .login-top-navigation-bar {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .navigation-bar {
+        #part-2 {
+            a {
+                display: none;
+            }
+        }
+
+        #part-3 {
+            button {
+                display: none;
+            }
+        }
+
+        h1 {
+            font-size: 20px;
+            height: min-content;
+            width: max-content;
+        }
+    }
+
+    .login-navigation-bar,
+    .login-top-navigation-bar {
+        display: none;
+    }
+
+    .login-top-navigation-bar-small-devices {
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+.search-bar-input {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(27, 27, 27);
+    border: none;
+    border-radius: 20px;
+
+    &::placeholder {
+        font-family: 'Roboto';
+        padding-left: 5%;
+        transition: all 0.3s;
+    }
+
+    &:focus {
+        &::placeholder {
+            color: transparent
+        }
+
+        outline: none;
+    }
+
+}

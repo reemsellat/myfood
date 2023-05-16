@@ -1,0 +1,171 @@
+.background, .flex-container-3 #part-1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: "Roboto";
+  color: whitesmoke;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+a {
+  text-decoration: none;
+}
+
+.register {
+  background-color: rgb(27, 27, 27);
+  color: rgb(81, 216, 115);
+  border: 1px solid rgb(81, 216, 115);
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+.register:hover {
+  background-color: rgb(81, 216, 115);
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.submit {
+  border: 1px solid rgb(81, 216, 115);
+  background-color: rgb(81, 216, 115);
+  border-radius: 20px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.flex-container-3 {
+  display: flex;
+  width: 100vw;
+}
+.flex-container-3 #part-1 {
+  position: relative;
+  max-height: 100vh;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/images/login_register.jpg);
+}
+.flex-container-3 #part-1 h1 {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  right: 50%;
+  left: auto;
+}
+.flex-container-3 #part-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+  flex-direction: column;
+  height: 100vh;
+  margin-right: 0;
+}
+.flex-container-3 #part-2 div {
+  flex-basis: auto;
+}
+.flex-container-3 #part-2 h1,
+.flex-container-3 #part-2 h3 {
+  text-align: center;
+}
+.flex-container-3 #part-2 h3 {
+  width: 100%;
+  text-align: center;
+  height: 0px;
+  line-height: 0px;
+  margin-bottom: 12%;
+}
+.flex-container-3 #part-2 h1 {
+  width: 100%;
+  margin-top: 12%;
+  text-align: center;
+  height: 5px;
+  line-height: 5px;
+}
+.flex-container-3 #part-2 form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: min(80%, 400px);
+}
+.flex-container-3 #part-2 form #password-error,
+.flex-container-3 #part-2 form #email-error {
+  display: none;
+}
+.flex-container-3 #part-2 form label {
+  color: #b9b9b9;
+}
+.flex-container-3 #part-2 form input {
+  transition: all 0.5s;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgb(58, 57, 57) 0px 1px 0px;
+  background-color: transparent;
+}
+.flex-container-3 #part-2 form input:focus {
+  outline: none !important;
+  background: transparent !important;
+  border: 1px solid rgb(81, 216, 115);
+}
+.flex-container-3 #part-2 form input:-webkit-autofill,
+.flex-container-3 #part-2 form input:-webkit-autofill:hover,
+.flex-container-3 #part-2 form input:-webkit-autofill:focus,
+.flex-container-3 #part-2 form input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+.flex-container-3 #part-2 form button {
+  margin-top: 10%;
+}
+
+@media only screen and (min-width: 992px) {
+  .flex-container-3 #part-1 {
+    flex-basis: 60vw;
+  }
+  .flex-container-3 #part-2 {
+    flex-basis: 40vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .flex-container-3 #part-1 {
+    flex-basis: 50vw;
+  }
+  .flex-container-3 #part-2 {
+    flex-basis: 50vw;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .flex-container-3 #part-1 {
+    display: none;
+  }
+  .flex-container-3 #part-2 {
+    flex-basis: 100vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .flex-container-3 #part-1 {
+    display: none;
+  }
+  .flex-container-3 #part-2 {
+    flex-basis: 100vw;
+  }
+}/*# sourceMappingURL=register_login.css.map */

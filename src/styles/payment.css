@@ -1,0 +1,174 @@
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: "Roboto";
+  color: whitesmoke;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+a {
+  text-decoration: none;
+}
+
+.register {
+  background-color: rgb(27, 27, 27);
+  color: rgb(81, 216, 115);
+  border: 1px solid rgb(81, 216, 115);
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+.register:hover {
+  background-color: rgb(81, 216, 115);
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.submit {
+  border: 1px solid rgb(81, 216, 115);
+  background-color: rgb(81, 216, 115);
+  border-radius: 20px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.payment {
+  position: absolute;
+  top: 10vh;
+  bottom: 0;
+  right: 0;
+  left: 25vw;
+  display: flex;
+  align-items: auto;
+  justify-content: center;
+  gap: 10%;
+  flex-direction: auto;
+}
+.payment div {
+  flex-basis: 40%;
+}
+.payment #part-1 #shopping-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.payment #part-1 #shopping-cart div {
+  background-color: rgb(48, 48, 48);
+  border-radius: 20px;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.payment #part-1 #shopping-cart div #name {
+  width: 30%;
+  align-self: center;
+}
+.payment #part-1 #shopping-cart div #count {
+  width: 5%;
+  text-align: center;
+}
+.payment #part-1 #shopping-cart div #price {
+  width: 35%;
+  text-align: center;
+}
+.payment #part-1 #shopping-cart div h3 {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.payment #part-1 #shopping-cart div img {
+  width: 10%;
+}
+.payment #part-1 #shopping-cart div button {
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+  flex-direction: auto;
+  background-color: gray;
+}
+.payment #part-1 #shopping-cart div button div {
+  flex-basis: auto;
+}
+.payment #part-2 {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: auto;
+  flex-direction: column;
+}
+.payment #part-2 div {
+  flex-basis: auto;
+}
+.payment #part-2 form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.payment #part-2 form input {
+  background-color: transparent;
+  border: none;
+  box-shadow: rgb(58, 57, 57) 0px 1px 0px;
+}
+.payment #part-2 form button {
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+.disable {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Disable scrolling on child elements */
+.disable div,
+.disable textarea {
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .payment {
+    left: 5vw;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .payment {
+    flex-direction: column;
+    left: 5vw;
+    padding-top: 10vh;
+  }
+  .payment div {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .payment {
+    flex-direction: column;
+    left: 5vw;
+    right: 5vw;
+    padding-top: 10vh;
+  }
+}/*# sourceMappingURL=payment.css.map */

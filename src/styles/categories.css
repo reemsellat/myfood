@@ -1,0 +1,213 @@
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: "Roboto";
+  color: whitesmoke;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+a {
+  text-decoration: none;
+}
+
+.register {
+  background-color: rgb(27, 27, 27);
+  color: rgb(81, 216, 115);
+  border: 1px solid rgb(81, 216, 115);
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+.register:hover {
+  background-color: rgb(81, 216, 115);
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.submit {
+  border: 1px solid rgb(81, 216, 115);
+  background-color: rgb(81, 216, 115);
+  border-radius: 20px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+
+#categories {
+  position: absolute;
+  top: 80px;
+  bottom: auto;
+  right: auto;
+  left: 20vw;
+  padding-left: 4vw;
+}
+
+.category-section {
+  position: absolute;
+  top: 280px;
+  bottom: auto;
+  right: auto;
+  left: 20vw;
+  display: flex;
+  flex-direction: column;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding-left: 5vw;
+  text-transform: capitalize;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(3, 170px);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 3vw;
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+.category div {
+  transition: all 0.5s;
+  border-radius: 30px;
+  background-color: #303030;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+.category div a {
+  height: 100%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: auto;
+  gap: auto;
+  flex-direction: column;
+}
+.category div a div {
+  flex-basis: auto;
+}
+.category div a img {
+  height: 150px;
+}
+.category div a p, .category div a h3 {
+  width: 80%;
+  text-align: start;
+}
+.category div a p {
+  margin-bottom: 0;
+  color: #b9b9b9;
+}
+.category div a h3 {
+  line-height: 0;
+}
+.category div:hover {
+  transform: translateY(-1vw);
+  box-shadow: rgb(80, 80, 80) 0px 13px 27px -5px, rgb(80, 79, 79) 0px 8px 16px -8px;
+}
+
+.categories-slide {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1vw;
+  display: flex;
+}
+.categories-slide img {
+  height: 70px;
+}
+.categories-slide div {
+  transition: all 0.3s;
+  border-radius: 30px;
+  background-color: #303030;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.categories-slide div:hover {
+  background-color: #464545;
+}
+.categories-slide div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+  flex-direction: column;
+  color: #b9b9b9;
+}
+.categories-slide div a div {
+  flex-basis: auto;
+}
+
+.swiper-wrapper, .swiper {
+  max-width: 70vw;
+}
+
+#categories .swiper-button-prev, #categories .swiper-button-next, .category-section .swiper-button-prev, .category-section .swiper-button-next {
+  display: none;
+}
+#categories .swiper-wrapper, .category-section .swiper-wrapper {
+  margin-bottom: 5vw;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #categories, .category-section {
+    left: 0vw;
+  }
+  .swiper-wrapper, .swiper {
+    max-width: 95vw;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  #categories, .category-section {
+    left: 0vw;
+  }
+  .swiper-wrapper, .swiper {
+    max-width: 95vw;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 460px) {
+  #categories, .category-section {
+    left: 0vw;
+    right: 0vw;
+  }
+  .category {
+    grid-template-columns: repeat(2, 170px);
+  }
+  .swiper-wrapper, .swiper {
+    max-width: 95vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  #categories, .category-section {
+    left: 0vw;
+    right: 0vw;
+  }
+  .category {
+    grid-template-columns: repeat(1, 170px);
+  }
+  .category div {
+    width: 75vw;
+  }
+  .swiper-wrapper, .swiper {
+    max-width: 95vw;
+  }
+}/*# sourceMappingURL=categories.css.map */
