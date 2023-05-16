@@ -24,7 +24,7 @@ function Home() {
     }
     const navigate = useNavigate()
     const handleonRegister = () => {
-        navigate('/register')
+        navigate('/myfood/register')
     }
     useEffect(() => {
         if (counter.current) return

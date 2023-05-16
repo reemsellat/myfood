@@ -13,7 +13,7 @@ function Login() {
     const password = useRef<HTMLInputElement>(null)
     const logIn = (email: any, password: any): void => {
         signInWithEmailAndPassword(auth, email, password).then((user) => {
-            path.current='/'
+            path.current='/myfood'
             console.log(user)
         }
 
@@ -66,7 +66,7 @@ function Login() {
                 <input type="password" id="password" ref={password} required></input>
                 <p id="login-password-error">{passwordError}</p>
                 <div><button type="submit" className="submit">Log In</button></div>
-                <NavLink to='/register'>Don't have an account ?</NavLink>
+                <NavLink to='/myfood/register'>Don't have an account ?</NavLink>
             </form>
         </div>
         </div>

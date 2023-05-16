@@ -123,7 +123,7 @@ function Register() {
                     <input type="password" id="confirm-password" ref={confirmPassword}></input>
                     <div><button type="submit" className="submit">SIGN UP</button></div>
                     
-                    <NavLink to='/myfood/login'>Already have an account ?</NavLink>
+                    <NavLink to='myfood/login'>Already have an account ?</NavLink>
                 </form>
             </div>
 
