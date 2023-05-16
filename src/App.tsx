@@ -44,16 +44,16 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/register' element={<Register></Register>} ></Route>
-            <Route path='/login' element={<Login></Login>}></Route>
-            <Route path='/' element={user == null ? (<Home></Home>) : (<HomeLoggedIn></HomeLoggedIn>)}></Route>
+            <Route path='/myfood/register' element={<Register></Register>} ></Route>
+            <Route path='/myfood/login' element={<Login></Login>}></Route>
+            <Route path='/myfood' element={user == null ? (<Home></Home>) : (<HomeLoggedIn></HomeLoggedIn>)}></Route>
             <Route element={user==null?(<NavigationBar></NavigationBar>):(<NavigationBarLoggedIn></NavigationBarLoggedIn>)}>
-              <Route path='/about-us' element={<About></About>}></Route>
-              <Route path='/reviews' element={<Reviews></Reviews>}></Route>
+              <Route path='/myfood/about-us' element={<About></About>}></Route>
+              <Route path='/myfood/reviews' element={<Reviews></Reviews>}></Route>
             </Route>
 
             <Route element={<NavigationBarLoggedIn></NavigationBarLoggedIn>}>
-              <Route path='/categories'>
+              <Route path='/myfood/categories'>
                 <Route index element={user == null ? (<Navigate to='/login' replace></Navigate>) : (<Categories></Categories>)}></Route>
                 <Route path=':category'>
                   <Route index element={user == null ? (<Navigate to='/login' replace></Navigate>) : <Category></Category>}></Route>
@@ -61,7 +61,7 @@ function App() {
                 </Route>
               </Route>
               
-              <Route path='/payment' element={user == null ? (<Navigate to='/login' replace></Navigate>) : <Payment></Payment>}></Route>
+              <Route path='/myfood/payment' element={user == null ? (<Navigate to='/login' replace></Navigate>) : <Payment></Payment>}></Route>
 
             </Route>
             
