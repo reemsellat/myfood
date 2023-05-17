@@ -38,7 +38,7 @@
         transform: scale(1);
     }
 
-    min-width: 85vw;
+   width: 85vw;
     display: flex;
     align-items: center;
     padding-left: 7.5vw;
@@ -54,7 +54,7 @@
     #part-2,
     #part-1 {
         justify-content: start;
-      
+        flex-basis: 25%;
     }
 
     #part-2 {
@@ -315,10 +315,6 @@
                 display: none;
             }
         }
-        #part-1{
-            flex-basis: 25%;
-        }
-        
     }
 
     .login-top-navigation-bar-small-devices {
@@ -340,9 +336,6 @@
                 display: none;
             }
         }
-        #part-1{
-            flex-basis: 45vw;
-        }
     }
 
     .login-navigation-bar,
@@ -359,9 +352,7 @@
                 display: none;
             }
         }
-        #part-1{
-            flex-basis: 45vw;
-        }
+
         #part-3 {
             button {
                 display: none;

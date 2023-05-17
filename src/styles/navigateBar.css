@@ -52,7 +52,7 @@ button {
 }
 
 .navigation-bar {
-  min-width: 85vw;
+  width: 85vw;
   display: flex;
   align-items: center;
   padding-left: 7.5vw;
@@ -94,6 +94,7 @@ button {
 .navigation-bar #part-2,
 .navigation-bar #part-1 {
   justify-content: start;
+  flex-basis: 25%;
 }
 .navigation-bar #part-2 a {
   flex-basis: 30%;
@@ -351,9 +352,6 @@ button {
   .navigation-bar #part-3 .hamburger-icon {
     display: none;
   }
-  .navigation-bar #part-1 {
-    flex-basis: 25%;
-  }
   .login-top-navigation-bar-small-devices {
     display: none;
   }
@@ -365,9 +363,6 @@ button {
   .navigation-bar #part-3 button {
     display: none;
   }
-  .navigation-bar #part-1 {
-    flex-basis: 45vw;
-  }
   .login-navigation-bar,
   .login-top-navigation-bar {
     display: none;
@@ -376,9 +371,6 @@ button {
 @media only screen and (max-width: 768px) {
   .navigation-bar #part-2 a {
     display: none;
-  }
-  .navigation-bar #part-1 {
-    flex-basis: 45vw;
   }
   .navigation-bar #part-3 button {
     display: none;

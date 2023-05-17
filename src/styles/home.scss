@@ -51,6 +51,10 @@
     }
 
     width: 60vw;
+    .swiper-wrapper{
+        max-width:60vw
+    }
+   
 
 }
 .hide{
@@ -125,12 +129,7 @@
         
     }
 }
-.swiper-wrapper{
-    width:70vw
-}
-.swiper{
-    width: 100%;
-}
+
 @media only screen and (min-width: 992px) {
 .flex-container{
     #part-2{

@@ -114,6 +114,9 @@ button {
 .swiper img {
   height: 100px;
 }
+.swiper .swiper-wrapper {
+  max-width: 60vw;
+}
 
 .hide {
   display: none;
@@ -188,14 +191,6 @@ button {
   height: -moz-fit-content;
   height: fit-content;
   padding: 5vw;
-}
-
-.swiper-wrapper {
-  width: 70vw;
-}
-
-.swiper {
-  width: 100%;
 }
 
 @media only screen and (min-width: 992px) {
