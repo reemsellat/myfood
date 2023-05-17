@@ -115,7 +115,7 @@ button {
   height: 100px;
 }
 .swiper .swiper-wrapper {
-  max-width: 60vw;
+  width: 100vw;
 }
 
 .hide {
