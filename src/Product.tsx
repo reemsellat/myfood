@@ -170,7 +170,7 @@ function Product() {
                 <h1>${productInfo.price}</h1>
                 <button className="submit" onClick={addProductToShoppingCart}>Order Now</button>
             </div>
-            <div id="part-2"><img src={productInfo.photo} ></img></div>
+            <div id="part-2"><img src={'../../'+productInfo.photo} ></img></div>
 
 
 

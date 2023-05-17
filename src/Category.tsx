@@ -41,7 +41,7 @@ function Category() {
                 return (
                     <div key={uniqid()}>
                         <NavLink to={{ pathname: item.id }}>
-                        <img src={item.photo}></img>
+                        <img src={'../'+item.photo}></img>
                         <p>{item.name}</p>
                         <h3> ${item.price}</h3>
                         
