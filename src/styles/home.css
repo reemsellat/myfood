@@ -191,7 +191,7 @@ button {
 }
 
 .swiper-wrapper {
-  min-width: 100vw;
+  width: 70vw;
 }
 
 .swiper {
