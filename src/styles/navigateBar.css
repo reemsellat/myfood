@@ -52,7 +52,7 @@ button {
 }
 
 .navigation-bar {
-  width: 85vw;
+  max-width: 85vw;
   display: flex;
   align-items: center;
   padding-left: 7.5vw;
@@ -357,11 +357,17 @@ button {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .navigation-bar #part-2 {
+    flex-basis: 0;
+  }
   .navigation-bar #part-2 a {
     display: none;
   }
   .navigation-bar #part-3 button {
     display: none;
+  }
+  .navigation-bar #part-1 {
+    flex-basis: 50%;
   }
   .login-navigation-bar,
   .login-top-navigation-bar {
@@ -369,11 +375,17 @@ button {
   }
 }
 @media only screen and (max-width: 768px) {
+  .navigation-bar #part-2 {
+    flex-basis: 0;
+  }
   .navigation-bar #part-2 a {
     display: none;
   }
   .navigation-bar #part-3 button {
     display: none;
+  }
+  .navigation-bar #part-1 {
+    flex-basis: 50%;
   }
   .navigation-bar h1 {
     font-size: 20px;

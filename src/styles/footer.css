@@ -54,6 +54,7 @@ button {
 .footer {
   margin-top: 50px;
   background-color: black;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: auto;

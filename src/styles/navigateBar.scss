@@ -1,7 +1,7 @@
 @import './shared_style.scss';
 
 .navigation-bar {
-
+    
     span {
         width: 10px;
     }
@@ -38,7 +38,8 @@
         transform: scale(1);
     }
 
-   width: 85vw;
+  
+   max-width: 85vw;
     display: flex;
     align-items: center;
     padding-left: 7.5vw;
@@ -315,6 +316,7 @@
                 display: none;
             }
         }
+        
     }
 
     .login-top-navigation-bar-small-devices {
@@ -329,12 +331,16 @@
             a {
                 display: none;
             }
+            flex-basis: 0;
         }
 
         #part-3 {
             button {
                 display: none;
             }
+        }
+        #part-1{
+            flex-basis: 50%;
         }
     }
 
@@ -351,12 +357,16 @@
             a {
                 display: none;
             }
+            flex-basis: 0;
         }
 
         #part-3 {
             button {
                 display: none;
             }
+        }
+        #part-1{
+            flex-basis: 50%;
         }
 
         h1 {
