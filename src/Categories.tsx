@@ -56,7 +56,7 @@ function Categories() {
                                 navigate(`${c.id}`)
                             }
                         }}>
-                            <img src={c.photo}></img>
+                            <img src={category?`../${c.photo}`:c.photo}></img>
                             {c.name}</a>
                     </div>
                     </SwiperSlide>

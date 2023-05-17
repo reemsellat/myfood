@@ -5,8 +5,8 @@ import { NavLink, Outlet, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 import ReactLoading from 'react-loading';
-import Categories from "./Categories";
 import uniqid from 'uniqid';
+import Categories from "./Categories";
 function Category() {
     const { getDocsOfCollection } = useAuth()
     const counter = useRef(false)
@@ -31,8 +31,8 @@ function Category() {
 
     return (
         <div>
+       
             <Categories></Categories>
-            
            
             {!done?(<div className="ReactLoading"><ReactLoading type={"spin"} color={"rgb(81, 216, 115)"}></ReactLoading></div>):<div className="category-section">
                  <h1>{current.category}</h1>
