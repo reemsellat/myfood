@@ -108,10 +108,6 @@ button {
   flex-basis: auto;
 }
 
-.home-swiper {
-  width: 60vw;
-  margin-left: 20vw;
-}
 .home-swiper img {
   height: 100px;
 }
@@ -198,6 +194,10 @@ button {
   .flex-container-2 .swiper-pagination-bullet {
     display: none;
   }
+  .home-swiper {
+    width: 60vw;
+    margin-left: 20vw;
+  }
   .home-swiper .swiper-wrapper {
     width: 60vw;
   }
@@ -216,6 +216,9 @@ button {
   }
   #about {
     flex-direction: column;
+  }
+  .home-swiper {
+    margin-left: 20vw;
   }
   .home-swiper .swiper-wrapper {
     width: 60vw;
@@ -238,6 +241,9 @@ button {
   }
   #about {
     flex-direction: column;
+  }
+  .home-swiper {
+    margin-left: 20vw;
   }
   .home-swiper .swiper-wrapper {
     width: 60vw;
@@ -262,6 +268,9 @@ button {
   }
   .flex-container #part-1 h3 {
     font-size: 16px;
+  }
+  .flex-container .home-swiper {
+    margin-left: 5vw;
   }
   .flex-container .home-swiper .swiper-wrapper {
     width: 100vw;

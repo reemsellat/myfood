@@ -50,8 +50,7 @@
         height: 100px;
     }
 
-    width: 60vw;
-   margin-left: 20vw;
+   
    
 
 }
@@ -144,6 +143,8 @@
     .swiper-wrapper{
         width:60vw
       }
+      width: 60vw;
+      margin-left: 20vw;
 }
 }
 
@@ -169,6 +170,7 @@
         .swiper-wrapper{
             width:60vw
           }
+          margin-left: 20vw;
     }
 }
 
@@ -197,6 +199,7 @@
         .swiper-wrapper{
             width:60vw
           }
+          margin-left: 20vw;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -228,6 +231,7 @@
         .swiper-wrapper{
             width:100vw
           }
+          margin-left: 5vw;
     }
     
 }
