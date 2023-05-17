@@ -60,7 +60,7 @@ function Home() {
                                 <img src="images/main-photo.jpg"></img>
                             </div>
                         </div>
-                        <div className="swiper">
+                        <div className="home-swiper">
                             <Swiper modules={[Navigation, Pagination, A11y, EffectCube]}
 
 

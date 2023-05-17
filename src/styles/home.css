@@ -108,10 +108,10 @@ button {
   flex-basis: auto;
 }
 
-.swiper {
+.home-swiper {
   width: 60vw;
 }
-.swiper img {
+.home-swiper img {
   height: 100px;
 }
 
@@ -197,7 +197,7 @@ button {
   .flex-container-2 .swiper-pagination-bullet {
     display: none;
   }
-  .swiper .swiper-wrapper {
+  .home-swiper .swiper-wrapper {
     width: 60vw;
   }
 }
@@ -216,12 +216,12 @@ button {
   #about {
     flex-direction: column;
   }
-  .swiper .swiper-wrapper {
+  .home-swiper .swiper-wrapper {
     width: 60vw;
   }
 }
 @media only screen and (max-width: 768px) and (min-width: 600px) {
-  .swiper {
+  .home-swiper {
     width: 90%;
   }
   .swiper-button-prev, .swiper-button-next {
@@ -238,12 +238,12 @@ button {
   #about {
     flex-direction: column;
   }
-  .swiper .swiper-wrapper {
+  .home-swiper .swiper-wrapper {
     width: 60vw;
   }
 }
 @media only screen and (max-width: 600px) {
-  .swiper {
+  .home-swiper {
     width: 90vw;
   }
   .flex-container {
@@ -262,7 +262,7 @@ button {
   .flex-container #part-1 h3 {
     font-size: 16px;
   }
-  .flex-container .swiper .swiper-wrapper {
+  .flex-container .home-swiper .swiper-wrapper {
     width: 100vw;
   }
   .swiper-button-next, .swiper-button-prev {
