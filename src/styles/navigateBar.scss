@@ -54,7 +54,7 @@
     #part-2,
     #part-1 {
         justify-content: start;
-        flex-basis: 25%;
+      
     }
 
     #part-2 {
@@ -314,6 +314,9 @@
             .hamburger-icon {
                 display: none;
             }
+        }
+        #part-1{
+            flex-basis: 25%;
         }
         
     }
