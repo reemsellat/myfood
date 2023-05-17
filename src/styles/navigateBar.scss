@@ -315,6 +315,7 @@
                 display: none;
             }
         }
+        
     }
 
     .login-top-navigation-bar-small-devices {
@@ -336,6 +337,9 @@
                 display: none;
             }
         }
+        #part-1{
+            flex-basis: 45%;
+        }
     }
 
     .login-navigation-bar,
@@ -352,7 +356,9 @@
                 display: none;
             }
         }
-
+        #part-1{
+            flex-basis: 45%;
+        }
         #part-3 {
             button {
                 display: none;
