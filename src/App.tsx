@@ -54,14 +54,14 @@ function App() {
 
             <Route element={<NavigationBarLoggedIn></NavigationBarLoggedIn>}>
               <Route path='/myfood/categories'>
-                <Route index element={user == null ? (<Navigate to='/login' replace></Navigate>) : (<Categories></Categories>)}></Route>
+                <Route index element={user == null ? (<Navigate to='/myfood/login' replace></Navigate>) : (<Categories></Categories>)}></Route>
                 <Route path=':category'>
-                  <Route index element={user == null ? (<Navigate to='/login' replace></Navigate>) : <Category></Category>}></Route>
-                  <Route path=':product' element={user == null ? (<Navigate to='/login' replace></Navigate>) : <Product></Product>}></Route>
+                  <Route index element={user == null ? (<Navigate to='/myfood/login' replace></Navigate>) : <Category></Category>}></Route>
+                  <Route path=':product' element={user == null ? (<Navigate to='/myfood/login' replace></Navigate>) : <Product></Product>}></Route>
                 </Route>
               </Route>
               
-              <Route path='/myfood/payment' element={user == null ? (<Navigate to='/login' replace></Navigate>) : <Payment></Payment>}></Route>
+              <Route path='/myfood/payment' element={user == null ? (<Navigate to='/myfood/login' replace></Navigate>) : <Payment></Payment>}></Route>
 
             </Route>
             
