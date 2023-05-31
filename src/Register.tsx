@@ -37,6 +37,7 @@ function Register() {
             }
 
         ).catch(err => {
+            document.getElementById('sign')?.classList.remove('disable')
             path.current=''
             console.log(err.message);
 
@@ -78,7 +79,7 @@ function Register() {
             p.style.display = "block"
             return setPasswordError('passwords do not match')
         }
-
+        document.getElementById('sign')?.classList.add('disable')
         signUp(email.current?.value, password.current?.value)
 
         console.log(result)
@@ -115,13 +116,13 @@ function Register() {
                     <input type="text" id="name" ref={name}></input>
                     <label htmlFor="email">Email</label>
                     <input type="email" id="email" ref={email}></input>
-                    <p id="email-error">{emailError}</p>
+                    <p id="email-error" className="error">{emailError}</p>
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" ref={password}></input>
-                    <p id="password-error">{passwordError}</p>
+                    <p id="password-error" className="error">{passwordError}</p>
                     <label htmlFor="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" ref={confirmPassword}></input>
-                    <div><button type="submit" className="submit">SIGN UP</button></div>
+                    <div><button type="submit" className="submit" id="sign">SIGN UP</button></div>
                     
                     <NavLink to='../myfood/login'>Already have an account ?</NavLink>
                 </form>

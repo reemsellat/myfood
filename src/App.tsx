@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import Home from './Home';
 import Category from './Category';
 import Product from './Product';
@@ -27,6 +27,7 @@ import NavigationBar from './NavigateBar';
 
 function App() {
   const [user, setUser] = useState(getAuth().currentUser)
+  const current=useParams()
   useEffect(() => { 
     
     onAuthStateChanged(auth, user => {
@@ -35,7 +36,7 @@ function App() {
      
     })
    
-  },[])
+  },[current.category])
  
   console.log(user)
   return (
@@ -49,7 +50,7 @@ function App() {
             <Route path='/myfood' element={user == null ? (<Home></Home>) : (<HomeLoggedIn></HomeLoggedIn>)}></Route>
             <Route element={user==null?(<NavigationBar></NavigationBar>):(<NavigationBarLoggedIn></NavigationBarLoggedIn>)}>
               <Route path='/myfood/about-us' element={<About></About>}></Route>
-              <Route path='/myfood/reviews' element={<Reviews></Reviews>}></Route>
+              <Route path='/myfood/reviews' element={user==null?<Reviews></Reviews>:<></>}></Route>
             </Route>
 
             <Route element={<NavigationBarLoggedIn></NavigationBarLoggedIn>}>

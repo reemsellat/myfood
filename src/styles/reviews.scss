@@ -1,7 +1,9 @@
 @import './shared_style.scss';
+
 #reviews {
-    @include position(absolute,10vh,auto,0,25vw);
-  
+    min-height: 100vh;
+    margin-left: 25vw;
+
     svg{
         fill:gray;
         margin-top: 1vh;
@@ -31,6 +33,7 @@
      
     }
 }
+
 @media only screen and (min-width: 992px) {
     
     
@@ -41,7 +44,7 @@
         .review{
             width:45%
         }
-        left: 5vw;
+        margin-left: 5vw;
         textarea{
             width: 40%;
         }
@@ -53,7 +56,7 @@
         .review{
             width:50%
         }
-        left: 5vw;
+        margin-left: 5vw;
         textarea{
             width: 45%;
         }
@@ -61,10 +64,11 @@
 }
 @media only screen and (max-width: 600px) {
     #reviews{
+       
         .review{
             width:80%
         }
-        left: 5vw;
+        margin-left: 5vw;
         textarea{
             width: 70%;
         }

@@ -50,6 +50,13 @@ button {
   padding-bottom: 10px;
   transition: all 0.3s;
 }
+.submit:hover {
+  background-color: rgb(65, 180, 94);
+}
+
+.error {
+  color: rgb(252, 72, 102);
+}
 
 .flex-container {
   margin-top: 10vh;
@@ -178,13 +185,17 @@ button {
 
 #about {
   display: flex;
-  margin-top: 10vh;
 }
 #about p {
   background-color: rgb(48, 48, 48);
   height: -moz-fit-content;
   height: fit-content;
   padding: 5vw;
+}
+
+#about-header {
+  margin-left: 21vw;
+  margin-top: 11vh;
 }
 
 @media only screen and (min-width: 992px) {

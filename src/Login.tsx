@@ -19,18 +19,21 @@ function Login() {
 
         ).catch(
             err => {
+                document.getElementById('login')?.classList.remove('disable')
                 path.current='';
                 if (err.message === 'Firebase: Error (auth/user-not-found).') {
                     const p = document.getElementById("login-email-error") as HTMLParagraphElement
                     p.style.display = "block"
 
                     setEmailError('User not found')
+                    
                 }
                 else {
                     if (err.message === 'Firebase: Error (auth/wrong-password).') {
                         const p = document.getElementById("login-password-error") as HTMLParagraphElement
                         p.style.display = "block"
                         setPasswordError('Wrong password')
+                       
                     }
                 }
             }
@@ -43,9 +46,10 @@ function Login() {
     const onhandleChange = async (e: any) => {
        
         e.preventDefault() 
-        
+        document.getElementById('login')?.classList.add('disable')
         logIn(email.current?.value, password.current?.value)
-
+        
+        
 
 
     }
@@ -61,11 +65,11 @@ function Login() {
             <form onSubmit={onhandleChange}>
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" ref={email} required></input>
-                <p id="login-email-error">{emailError}</p>
+                <p id="login-email-error" className="error">{emailError}</p>
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" ref={password} required></input>
-                <p id="login-password-error">{passwordError}</p>
-                <div><button type="submit" className="submit">Log In</button></div>
+                <p id="login-password-error" className="error">{passwordError}</p>
+                <div><button type="submit" className="submit" id="login" >Log In</button></div>
                 <NavLink to='/myfood/register'>Don't have an account ?</NavLink>
             </form>
         </div>

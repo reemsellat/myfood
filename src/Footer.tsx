@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import './styles/footer.css'
 function Footer() {
+    
     return (
         <div>
             <div className="footer">
@@ -8,9 +9,9 @@ function Footer() {
 
                 <div id="part-2">
 
-                    <NavLink to='/'>Home </NavLink><span></span>
-                    <NavLink to='/about-us'>About </NavLink><span></span>
-                    <NavLink to='/reviews'>Reviews</NavLink>
+                    <NavLink to='/myfood'>Home </NavLink><span></span>
+                    <NavLink to='/myfood/about-us'>About </NavLink><span></span>
+                    <NavLink to='/myfood/reviews'>Reviews</NavLink>
 
                 </div>
                 <div id="part-3">

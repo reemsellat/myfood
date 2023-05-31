@@ -12,11 +12,11 @@ function Category() {
     const counter = useRef(false)
     const current = useParams();
     const [done, setDone] = useState(Boolean)
-    const [product, setProduct] = useState(Array<{ id: string, name: string, photo: string,price:number }>)
+    const [product, setProduct] = useState(Array<{ id: string, name: string, photo: string,price:number ,rating:number}>)
     const productFiller = async () => {
         const querySnapshot = await getDocsOfCollection(current.category)
         for (let i = 0; i < querySnapshot.size; i++) {
-            setProduct(product => [...product, { id: querySnapshot.docs[i].id, name: querySnapshot.docs[i].data().name, photo: querySnapshot.docs[i].data().photo ,price:querySnapshot.docs[i].data().price}])
+            setProduct(product => [...product, { id: querySnapshot.docs[i].id, name: querySnapshot.docs[i].data().name, photo: querySnapshot.docs[i].data().photo ,price:querySnapshot.docs[i].data().price,rating:querySnapshot.docs[i].data().rating}])
         }
     }
     useEffect(() => {
@@ -25,7 +25,7 @@ function Category() {
         productFiller().then(()=>{
             setDone(true)
         })
-    }, [])
+    }, [current.category])
 
 
 
@@ -35,14 +35,14 @@ function Category() {
             <Categories></Categories>
            
             {!done?(<div className="ReactLoading"><ReactLoading type={"spin"} color={"rgb(81, 216, 115)"}></ReactLoading></div>):<div className="category-section">
-                 <h1>{current.category}</h1>
+                {current.category!="fast_food"?<h1>{current.category}</h1>:<h1>Fast Food</h1>} 
                  <div className="category">
          {(product.map(item => {
                 return (
                     <div key={uniqid()}>
                         <NavLink to={{ pathname: item.id }}>
                         <img src={'../'+item.photo}></img>
-                        <p>{item.name}</p>
+                        <p>{item.name}<br></br><span style={{color:"rgb(252, 72, 102)"}}>{item.rating} </span><span style={{fontWeight:"semibold"}}>stars</span></p>
                         <h3> ${item.price}</h3>
                         
                            

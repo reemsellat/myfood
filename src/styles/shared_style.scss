@@ -27,6 +27,7 @@
     background-repeat: no-repeat;
 }
 $green:rgb(81, 216, 115);
+$darkGreen:rgb(65, 180, 94);
 $pink:rgb(252, 72, 102);
 $black:rgb(27, 27, 27);
 $gray:rgb(48, 48, 48);
@@ -80,5 +81,10 @@ button {
     padding-top: 10px;
     padding-bottom: 10px;
     transition: all 0.3s;
-
+    &:hover{
+        background-color:$darkGreen ;
+    }
+}
+.error{
+    color:$pink
 }

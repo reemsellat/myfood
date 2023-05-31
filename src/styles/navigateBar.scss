@@ -108,6 +108,7 @@
 }
 
 .login-top-navigation-bar {
+    border-bottom: 2px solid black;
     height: 10vh;
     @include flex(flex, center, center, auto, 40%, auto);
 
@@ -198,6 +199,9 @@
         margin-left: 90%;
         margin-top: 2%;
     }
+    .profile-image{
+        margin-left: 3vw
+    }
 }
 
 .login-hamburger-nav-menu {
@@ -236,7 +240,11 @@
         border-radius: 20px;
         width: 80%;
         margin-left: 2%;
-
+        a{
+            width: 90%;
+           
+            margin-left: 0;
+        }
         &::placeholder {
             font-family: 'Roboto';
             padding-left: 5%;
@@ -411,4 +419,7 @@
         outline: none;
     }
 
+}
+.hamburger-icon{
+    cursor: pointer;
 }

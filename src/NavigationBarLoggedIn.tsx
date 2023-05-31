@@ -70,7 +70,7 @@ function NavigationBarLoggedIn() {
                 <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/categories' ><p>Categories</p></NavLink>
                 <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/payment' ><p>Payment</p></NavLink>
                 <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/about-us'><p>About us</p></NavLink>
-                <NavLink style={({ isActive }) => ({ backgroundColor: isActive ? "rgb(252, 72, 102)" : "transparent" })} to='/myfood/reviews'><p>Reviews</p></NavLink>
+
             </div>
             <div className="login-top-navigation-bar-small-devices">
                 <div id="part-1">
@@ -94,7 +94,7 @@ function NavigationBarLoggedIn() {
                 <NavLink to='/myfood/categories' ><p>Categories</p></NavLink>
                 <NavLink to='/myfood/payment' ><p>Payment</p></NavLink>
                 <NavLink to='/myfood/about-us'><p>About us</p></NavLink>
-                <NavLink to='/myfood/reviews'><p>Reviews</p></NavLink>
+           
 
                 <div id="part-3">
                     <Icon path={mdiMagnify} size={1} rotate={90} />

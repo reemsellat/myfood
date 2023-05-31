@@ -1,9 +1,14 @@
 @import './shared_style.scss';
 .footer {
     
-    margin-top: 50px;
+  top: 100vh;
     background-color: black;
-    width: 100vw;
+    max-width: 100vw;
+    width: 100%;
+    position: sticky;
+    bottom: 0px;
+    
+   
     span {
         min-width: 10px;
     }

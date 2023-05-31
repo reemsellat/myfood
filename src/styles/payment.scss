@@ -89,9 +89,12 @@
   
   /* Disable scrolling on child elements */
   .disable div,
-  .disable textarea {
+  .disable textarea ,
+  .disable button
+  {
     overflow: hidden;
   }
+  
   @media only screen and (min-width: 992px) {
     
     

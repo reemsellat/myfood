@@ -50,6 +50,13 @@ button {
   padding-bottom: 10px;
   transition: all 0.3s;
 }
+.submit:hover {
+  background-color: rgb(65, 180, 94);
+}
+
+.error {
+  color: rgb(252, 72, 102);
+}
 
 #categories {
   position: absolute;
@@ -81,8 +88,8 @@ button {
   grid-template-columns: repeat(3, 170px);
   grid-template-rows: repeat(2, auto);
   row-gap: 3vw;
-  -moz-column-gap: 1vw;
-       column-gap: 1vw;
+  -moz-column-gap: 2vw;
+       column-gap: 2vw;
   min-height: -moz-fit-content;
   min-height: fit-content;
 }
@@ -122,10 +129,11 @@ button {
 }
 .category div:hover {
   transform: translateY(-1vw);
-  box-shadow: rgb(80, 80, 80) 0px 13px 27px -5px, rgb(80, 79, 79) 0px 8px 16px -8px;
+  box-shadow: rgb(80, 80, 80) 0px 7px 14px -5px, rgb(80, 79, 79) 0px 8px 16px -8px;
 }
 
 .categories-slide {
+  cursor: pointer;
   width: -moz-fit-content;
   width: fit-content;
   margin: 1vw;
@@ -192,7 +200,9 @@ button {
     max-width: 95vw;
   }
   .category {
-    grid-template-columns: repeat(2, 170px);
+    grid-template-columns: repeat(2, 200px);
+    -moz-column-gap: 7vw;
+         column-gap: 7vw;
   }
 }
 @media only screen and (max-width: 460px) {

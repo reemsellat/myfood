@@ -50,6 +50,13 @@ button {
   padding-bottom: 10px;
   transition: all 0.3s;
 }
+.submit:hover {
+  background-color: rgb(65, 180, 94);
+}
+
+.error {
+  color: rgb(252, 72, 102);
+}
 
 .navigation-bar {
   max-width: 85vw;
@@ -143,6 +150,7 @@ button {
 }
 
 .login-top-navigation-bar {
+  border-bottom: 2px solid black;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -239,6 +247,9 @@ button {
   margin-left: 90%;
   margin-top: 2%;
 }
+.hamburger-nav-menu .profile-image, .login-hamburger-nav-menu .profile-image {
+  margin-left: 3vw;
+}
 
 .login-hamburger-nav-menu {
   z-index: 1000;
@@ -275,6 +286,10 @@ button {
   border-radius: 20px;
   width: 80%;
   margin-left: 2%;
+}
+.login-hamburger-nav-menu .search-bar a {
+  width: 90%;
+  margin-left: 0;
 }
 .login-hamburger-nav-menu .search-bar::-moz-placeholder {
   font-family: "Roboto";
@@ -428,4 +443,8 @@ button {
 }
 .search-bar-input:focus::placeholder {
   color: transparent;
+}
+
+.hamburger-icon {
+  cursor: pointer;
 }/*# sourceMappingURL=navigateBar.css.map */

@@ -117,7 +117,7 @@
 }
 #about{
     display: flex;
-    margin-top: 10vh;
+ 
     p{
         background-color: $gray;
         height: fit-content;
@@ -125,6 +125,11 @@
         
         
     }
+
+}
+#about-header{
+    margin-left: 21vw;
+    margin-top: 11vh;
 }
 
 @media only screen and (min-width: 992px) {

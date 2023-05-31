@@ -180,7 +180,7 @@ function Payment() {
                     <label htmlFor="credit-card-number">Credit Card Number</label>
                     <input id="credit-card-number" type="number"></input>
                     <label htmlFor="expiration-date">Expiration Date</label>
-                    <input id="expiration-date" type="date"></input>
+                    <input id="expiration-date"></input>
                     <div><button className="submit" type="submit">Check Out</button></div>
                 </form>
             </div>

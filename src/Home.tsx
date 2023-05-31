@@ -27,6 +27,9 @@ function Home() {
         navigate('/myfood/register')
     }
     useEffect(() => {
+      
+          
+       
         if (counter.current) return
         counter.current = true
         getCategories().then(() => {

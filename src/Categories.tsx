@@ -27,7 +27,7 @@ function Categories() {
         getCategories().then(()=>{
             setDone(true)
         })
-    }, [])
+    }, [category])
     return (
         <div>
             {!done?(<div  className="ReactLoading"><ReactLoading type={"spin"} color={"rgb(81, 216, 115)"} ></ReactLoading></div>):(<div className="swiper" id="categories">
@@ -47,9 +47,10 @@ function Categories() {
                 {categories.map(c => {
                 return (
                     <SwiperSlide className="categories-slide">
-                    <div key={uniqid()}>
+                    <div  key={uniqid()}>
                         <a onClick={()=>{
                             if(category){
+                            
                               navigate(`../${c.id}`)
                             }
                             else{

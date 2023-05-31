@@ -50,13 +50,17 @@ button {
   padding-bottom: 10px;
   transition: all 0.3s;
 }
+.submit:hover {
+  background-color: rgb(65, 180, 94);
+}
+
+.error {
+  color: rgb(252, 72, 102);
+}
 
 #reviews {
-  position: absolute;
-  top: 10vh;
-  bottom: auto;
-  right: 0;
-  left: 25vw;
+  min-height: 100vh;
+  margin-left: 25vw;
 }
 #reviews svg {
   fill: gray;
@@ -83,7 +87,7 @@ button {
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #reviews {
-    left: 5vw;
+    margin-left: 5vw;
   }
   #reviews .review {
     width: 45%;
@@ -94,7 +98,7 @@ button {
 }
 @media only screen and (max-width: 768px) and (min-width: 600px) {
   #reviews {
-    left: 5vw;
+    margin-left: 5vw;
   }
   #reviews .review {
     width: 50%;
@@ -105,7 +109,7 @@ button {
 }
 @media only screen and (max-width: 600px) {
   #reviews {
-    left: 5vw;
+    margin-left: 5vw;
   }
   #reviews .review {
     width: 80%;

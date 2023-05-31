@@ -50,6 +50,13 @@ button {
   padding-bottom: 10px;
   transition: all 0.3s;
 }
+.submit:hover {
+  background-color: rgb(65, 180, 94);
+}
+
+.error {
+  color: rgb(252, 72, 102);
+}
 
 .payment {
   position: absolute;
@@ -145,7 +152,8 @@ button {
 
 /* Disable scrolling on child elements */
 .disable div,
-.disable textarea {
+.disable textarea,
+.disable button {
   overflow: hidden;
 }
 
