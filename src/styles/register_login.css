@@ -1,4 +1,4 @@
-.background, .flex-container-3 #part-1 {
+.background {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@ button {
   max-height: 100vh;
   text-align: center;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/images/login_register.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/images/login_register.jpg) scroll no-repeat center/cover;
 }
 .flex-container-3 #part-1 h1 {
   font-size: 80px;
